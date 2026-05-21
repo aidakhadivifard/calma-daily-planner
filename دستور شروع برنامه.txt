@@ -1,0 +1,3 @@
+cd C:\Users\aidak\calma\calma-v2
+.venv\Scripts\activate.bat
+python bot.py
