@@ -1,0 +1,11 @@
+node_modules
+.env
+.env.*
+!.env.example
+
+# Generated story assets and local data store
+data/db.json
+public/audio/*
+public/images/*
+!public/audio/.gitkeep
+!public/images/.gitkeep

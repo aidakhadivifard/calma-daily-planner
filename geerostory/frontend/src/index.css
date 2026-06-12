@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  /* Night — backgrounds */
+  --color-night-950: #0d0817;
+  --color-night-900: #150f24;
+  --color-night-800: #1d1530;
+  --color-night-700: #271c40;
+  --color-night-600: #33274f;
+  --color-night-500: #423564;
+
+  /* Lavender — accents / primary buttons */
+  --color-lavender-50: #faf8ff;
+  --color-lavender-100: #efe8ff;
+  --color-lavender-200: #ddccff;
+  --color-lavender-300: #c6acfb;
+  --color-lavender-400: #b196f5;
+  --color-lavender-500: #9b7ef0;
+  --color-lavender-600: #8163d8;
+  --color-lavender-700: #6a4cba;
+
+  /* Giraffe — mascot palette */
+  --color-giraffe-50: #fff8ec;
+  --color-giraffe-100: #ffecc4;
+  --color-giraffe-200: #ffd896;
+  --color-giraffe-300: #ffc05e;
+  --color-giraffe-400: #faa83a;
+  --color-giraffe-500: #f0922a;
+  --color-giraffe-600: #d97a1f;
+  --color-giraffe-700: #a8581a;
+  --color-giraffe-spot: #c4691b;
+  --color-giraffe-belly: #fff3da;
+
+  /* Story theme tag colors */
+  --color-tag-animals: #7fd8a6;
+  --color-tag-heroes: #ff9d8a;
+  --color-tag-sports: #6fc3ff;
+  --color-tag-space: #b29bff;
+  --color-tag-invention: #ffd166;
+  --color-tag-mythology: #f297c4;
+  --color-tag-nature: #9adb84;
+
+  --font-display: "Baloo 2", "Nunito", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+
+  --shadow-glow: 0 18px 40px -18px rgba(155, 126, 240, 0.55);
+}
+
+.night-mode {
+  --color-night-950: #000000;
+  --color-night-900: #040308;
+  --color-night-800: #0b0710;
+  --color-night-700: #130e1d;
+  --color-night-600: #1b1528;
+  --color-night-500: #281f38;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-night-900 text-lavender-50 font-body antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-night-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-shadow-soft {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  }
+}

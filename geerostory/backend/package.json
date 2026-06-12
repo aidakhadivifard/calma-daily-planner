@@ -1,0 +1,23 @@
+{
+  "name": "geerostory-backend",
+  "version": "1.0.0",
+  "description": "Geero bedtime story API server",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^14.0.0",
+    "openai": "^6.42.0",
+    "stripe": "^22.2.0"
+  }
+}
