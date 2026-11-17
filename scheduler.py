@@ -2,10 +2,10 @@ from datetime import datetime, timedelta, time
 from zoneinfo import ZoneInfo
 
 
-try:
-    from config import CALMA_TIMEZONE
-except ImportError:
-    CALMA_TIMEZONE = "Asia/Tehran"
+# The bot timezone comes from BOT_TIMEZONE in .env (see config.py).
+# Before, this imported a name config.py never defined, so it always
+# silently fell back to Asia/Tehran and ignored BOT_TIMEZONE.
+from config import BOT_TIMEZONE as CALMA_TIMEZONE
 
 
 DAY_END_HOUR = 23
